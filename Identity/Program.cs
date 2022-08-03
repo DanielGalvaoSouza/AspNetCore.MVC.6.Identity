@@ -44,8 +44,13 @@ app.MapRazorPages();
 app.Run();
 #elif SECOND
 #region snippet_
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System;
 using WebApp1.Data;
 
 var builder = WebApplication.CreateBuilder(args);
